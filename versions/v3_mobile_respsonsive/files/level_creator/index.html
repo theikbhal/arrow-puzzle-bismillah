@@ -1,0 +1,16 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ece9e2"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><title>Arrow level creator</title>
+<link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="style.css"></head><body data-theme="beige">
+<div id="wrap"><div id="stage"><canvas id="cv"></canvas></div>
+<aside id="panel"><h2>Level creator</h2>
+ <label>Level <select id="eLevel"></select></label>
+ <div class="g2"><label>Name<input id="eName"></label><label>Difficulty<select id="eDiff"><option>Normal</option><option>Medium</option><option>Hard</option></select></label>
+ <label>Columns<input id="eCols" type="number" min="3" max="30"></label><label>Rows<input id="eRows" type="number" min="3" max="30"></label></div>
+ <div class="row"><button class="seg on" data-tool="draw">Draw arrow</button><button class="seg" data-tool="erase">Erase</button><button id="eSize">Apply size</button><button id="eClear">Clear</button></div>
+ <p class="hint">Drag across cells to draw. The last step sets the arrowhead. Drag back to undo a cell.</p>
+ <div class="row"><button id="eTest">Test play</button><button id="eCheck">Check solvable</button><button id="eGen">Auto-fill</button><input id="eCount" type="number" value="12" min="2" max="80"></div>
+ <div class="row"><button class="primary" id="eSave">Save level</button><button id="eNew">+ New</button><button id="eDup">Duplicate</button><button id="eDel">Delete</button></div>
+ <div class="row"><button id="eExport">Export levels.json</button><button id="eOpen">Open levels.json</button><button id="eReset">Reset all</button></div>
+ <label>Theme <select id="eTheme"><option value="beige">Eye Comfort Beige</option><option value="dark">Dark Mode</option><option value="green">Pastel Green</option><option value="navy">Navy</option><option value="sunset">Sunset</option></select></label>
+ <label>This level as JSON (edit, then Import)<textarea id="eJson" spellcheck="false"></textarea></label><div class="row"><button id="eImport">Import JSON</button></div><p id="status" class="hint"></p>
+ <input type="file" id="eFile" accept=".json" hidden></aside></div>
+<script src="levels.js"></script><script src="core.js"></script><script src="renderer.js"></script><script src="creator.js"></script></body></html>

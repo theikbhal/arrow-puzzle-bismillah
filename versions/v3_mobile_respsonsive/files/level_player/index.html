@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#ece9e2"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><title>Arrows Puzzle</title>
+<link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="style.css"></head><body data-theme="beige"><div id="app">
+<section id="home" class="view">
+ <header class="bar"><span class="pill">🔥 <b id="streak">0</b> <span data-i="streak"></span></span><span class="pill">🏆 <b id="trophies">0</b>/6</span><button class="icon" data-act="settings">⚙</button></header>
+ <h1>Arrows Puzzle</h1><p class="sub" data-i="tagline"></p>
+ <button id="btnPlay" class="primary">Play</button><button id="btnDaily" class="outline"><b data-i="daily"></b><span>📅</span></button>
+ <h3 data-i="levels"></h3><div id="grid"></div></section>
+<section id="game" class="view hidden">
+ <header class="bar"><button class="icon" id="btnBack">‹</button><b id="title"></b><button class="icon" data-act="settings">⚙</button></header>
+ <div class="bar"><span class="pill dark">➤ <b id="left">0</b></span><span id="hearts"></span><span class="pill" id="diff"></span></div>
+ <div id="stage"><canvas id="cv"></canvas></div>
+ <footer class="tools"><button class="round" id="btnHint">💡<i id="hintN">1</i></button><button class="round" id="btnGrid">#</button></footer>
+ <div id="msg" class="hidden"><div><h2 id="msgT"></h2><p id="msgP"></p><button class="primary" id="msgB"></button></div></div></section>
+<aside id="settings" class="sheet hidden"><div>
+ <div class="row"><h2 data-i="settings"></h2><button class="icon" id="sClose">✕</button></div>
+ <label class="row"><span data-i="sound"></span><input type="checkbox" id="sSound"></label>
+ <div class="row"><select id="sPack"><option value="chime">Chime</option><option value="wood">Wood (tasbih)</option><option value="water">Water drop</option></select><input type="range" id="sSfxVol" min="0" max="1" step=".05"></div>
+ <label class="row"><span data-i="music"></span><select id="sMusic"></select></label>
+ <div class="row"><span data-i="volume"></span><input type="range" id="sMusVol" min="0" max=".8" step=".02"></div><p class="hint" data-i="audioHint"></p>
+ <label class="row"><span data-i="haptics"></span><input type="checkbox" id="sHaptics"></label>
+ <label class="row"><span data-i="rgb"></span><input type="checkbox" id="sRgb"></label>
+ <label class="row"><span data-i="theme"></span><select id="sTheme"><option value="beige">Eye Comfort Beige</option><option value="dark">Dark Mode</option><option value="green">Pastel Green</option><option value="navy">Navy</option><option value="sunset">Sunset</option></select></label>
+ <label class="row"><span data-i="language"></span><select id="sLang"></select></label>
+ <div class="row"><button id="sImport" data-i="loadLevels"></button><button id="sReset" data-i="reset"></button></div><input type="file" id="sFile" accept=".json" hidden>
+</div></aside></div>
+<script src="levels.js"></script><script src="core.js"></script><script src="renderer.js"></script><script src="i18n.js"></script><script src="audio/tracks.js"></script><script src="audio.js"></script><script src="player.js"></script></body></html>

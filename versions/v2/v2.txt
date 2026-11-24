@@ -1,0 +1,45 @@
+
+https://claude.ai/chat/19d22452-ad21-4202-8991-84640d6a9af1
+
+improve matching sounds 
+different islamic verified sounds background
+even suport as many famous language
+mainl all type indian langues
+---
+support 300 levels
+
+Bismillah. I'll add the new audio system, 27 languages and 300 baked levels to the player, then rebuild all the zips.
+
+Bismillah. The updated zips are ready. I tested the logic in a headless page: it loads, shows 300 level buttons and 27 languages, starts a level, and switches language and text direction. I couldn't test the sound itself, so please listen on your phone and tell me if anything is too loud, too harsh or off.
+
+Matching sounds (synthesized, no audio files)
+
+Each cleared arrow plays a note one step higher on a gentle scale, so clearing a level sounds like a melody.
+A blocked tap gives a soft low thud, and there are separate sounds for winning, losing and hints.
+Settings lets you pick the sound style: Chime, Wood (tasbih-bead click) or Water drop, and set the volume.
+
+Background sounds
+
+Built in, no files needed: Rain, Brown noise, Fireplace, Breath, Nature and Calm pad. Music is off by default and has its own volume slider.
+Islamic audio: I can't supply or verify Quran recitation or nasheeds, so I built a place for your own files. Put a recording in audio/, add one line in audio/tracks.js, and it shows up in Settings → Music, grouped as quran, nasheed or dhikr. audio/README.md lists sources to check, such as quran.com, everyayah.com and quranicaudio.com. Read each site's terms before using audio in an app, and check the reciter yourself.
+I kept recitation off by default and separate from the game sound effects. If you're unsure about recitation as game background, ask your imam; vocals-only nasheed or dhikr are the usual safer choice.
+
+Languages (27)
+
+Indian (13): Hindi, Bengali, Telugu, Tamil, Marathi, Gujarati, Kannada, Malayalam, Punjabi, Odia, Assamese, Urdu and Nepali.
+World (13): English, Spanish, French, German, Dutch, Portuguese, Italian, Russian, Turkish, Indonesian, Arabic, Chinese, Japanese and Korean.
+Arabic and Urdu switch the page to right-to-left.
+The other Indian languages (Konkani, Maithili, Kashmiri, Sindhi, Bodo, Dogri, Santali, Manipuri and Sanskrit) are not translated yet. They fall back to English until someone adds a line in i18n.js.
+I wrote these translations myself, and they cover only the main screens. Please have a native speaker check them, especially Telugu, Tamil and the other Indian languages. Theme names and some settings labels stay in English.
+
+300 levels
+
+Levels 1–2 are handmade and levels 3–12 are sized to your photos. After that, boards grow from about 10×12 to 15×21 and arrows from 16 to 57, with longer arrows on later levels.
+Levels 1–5 are Normal, 6–120 are Medium and 121–300 are Hard.
+Every level is checked as solvable.
+The title now shows only the level number, with dots for difficulty, so it needs no translation.
+To regenerate or change the levels, run node tools/build_levels.js 300 inside level_creator, then copy the new levels.js into the player and renderer folders.
+
+Download the all zip, or just the player zip. Your old browser progress may show stale stars, so clear the site data if the level grid looks odd.
+
+Next you can say "go" for the Vercel deployment steps, or ask for the Mac Swift level editor.

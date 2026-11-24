@@ -1,0 +1,31 @@
+https://claude.ai/chat/19d22452-ad21-4202-8991-84640d6a9af1https://claude.ai/chat/19d22452-ad21-4202-8991-84640d6a9af1
+
+
+mobile responsive
+
+I'll make all three tools fit phones: full-screen layout, landscape mode, safe areas and bigger touch targets.
+
+Bismillah. The player, creator and renderer viewer now fit phones. The updated zips are ready to download. I checked them in a test browser at phone size, in portrait (390×780) and landscape (780×390). There was no sideways scrolling and no errors, and the screenshots looked right. I haven't tried a real phone yet.
+
+Player
+
+The game fills the real visible screen, including phones whose browser bar hides and shows as you scroll.
+The board resizes to fit, and rotating the phone re-fits it.
+In landscape, the board sits on the left and the 💡 and # buttons move to the right side.
+Small phones get slightly tighter spacing. Page zoom and pull-to-refresh don't interfere with taps.
+Buttons are at least 44 px tall, and arrows have a bigger tap area for fingers.
+Camera notches and the home bar are respected.
+
+Creator
+
+On a phone the canvas stays pinned at the top while you scroll the controls below it, so you can change settings and keep drawing.
+Drag-to-draw works by touch.
+Controls are larger and wrap to fit.
+
+Renderer viewer
+
+On a phone it stacks the preview on top and the controls below.
+
+You can also use the player like an app on your phone. Once it's on Vercel, open it on your phone, tap Share, then Add to Home Screen, and it opens full-screen.
+
+Next, say "go" and I'll give you the Vercel deployment steps. After that I can build the Mac Swift level editor.

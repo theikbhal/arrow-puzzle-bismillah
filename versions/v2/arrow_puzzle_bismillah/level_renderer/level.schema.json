@@ -1,0 +1,6 @@
+{"$schema":"http://json-schema.org/draft-07/schema#","title":"Arrow Puzzle levels (levels.json = array of Level)",
+ "definitions":{"Level":{"type":"object","required":["id","name","cols","rows","arrows"],
+  "properties":{"id":{"type":"integer"},"name":{"type":"string"},"difficulty":{"enum":["Normal","Medium","Hard"]},
+   "cols":{"type":"integer","minimum":3},"rows":{"type":"integer","minimum":3},
+   "arrows":{"type":"array","items":{"type":"object","required":["path"],"properties":{"path":{"description":"Corner cells [x,y] from tail to head. Last segment = direction. Arrows must not overlap.","type":"array","minItems":2,"items":{"type":"array","items":{"type":"integer"},"minItems":2,"maxItems":2}}}}}}}},
+ "type":"array","items":{"$ref":"#/definitions/Level"}}
