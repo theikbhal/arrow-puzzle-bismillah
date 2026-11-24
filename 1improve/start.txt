@@ -1,0 +1,9 @@
+1. confetti missing
+2. more level missing
+3. level build , drag arrow 
+4. arrow animation wiggle not working, only straight arrow working
+
+5. more screenshots needed
+
+
+6. vercel drop used

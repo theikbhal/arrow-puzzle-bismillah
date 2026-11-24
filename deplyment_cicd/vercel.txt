@@ -1,0 +1,6 @@
+npm i -g vercel
+cd ~/Downloads/arrow_puzzle_bismillah/level_player
+vercel --prod
+
+
+https://chat.deepseek.com/a/chat/s/309da78d-ab51-4723-aff0-85be25089008

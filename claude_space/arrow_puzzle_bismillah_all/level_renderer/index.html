@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Level renderer</title>
+<link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="style.css"></head><body data-theme="beige">
+<div id="wrap"><div id="stage"><canvas id="cv"></canvas></div>
+<div id="ctl"><h2>Level renderer</h2>
+<label>Level <select id="lvl"></select></label><label>Theme <select id="theme"><option value="beige">Eye Comfort Beige</option><option value="dark">Dark Mode</option><option value="green">Pastel Green</option><option value="navy">Navy</option><option value="sunset">Sunset</option></select></label>
+<label><input type="checkbox" id="grid" checked> Exit lines</label><label><input type="checkbox" id="rgb"> RGB arrows</label>
+<div class="row"><button id="play">Play solution</button><button id="png">Save PNG</button><button id="open">Open levels.json</button></div>
+<input type="file" id="file" accept=".json" hidden><p id="info"></p></div></div>
+<script src="levels.js"></script><script src="core.js"></script><script src="renderer.js"></script><script src="viewer.js"></script></body></html>

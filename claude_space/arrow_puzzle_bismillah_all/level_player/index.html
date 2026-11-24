@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Arrows Puzzle</title>
+<link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="style.css"></head><body data-theme="beige"><div id="app">
+<section id="home" class="view">
+ <header class="bar"><span class="pill">🔥 <b id="streak">0</b> Day streak</span><span class="pill">🏆 <b id="trophies">0</b>/6 Trophies</span><button class="icon" data-act="settings">⚙</button></header>
+ <h1>Arrows Puzzle</h1><p class="sub">Improve your critical thinking without any distraction.</p>
+ <button id="btnPlay" class="primary">Play</button><button id="btnDaily" class="outline"><b>Daily puzzle</b><span>Daily</span></button>
+ <h3>Levels</h3><div id="grid"></div></section>
+<section id="game" class="view hidden">
+ <header class="bar"><button class="icon" id="btnBack">‹</button><b id="title"></b><button class="icon" data-act="settings">⚙</button></header>
+ <div class="bar"><span class="pill dark">➤ <b id="left">0</b></span><span id="hearts"></span><span class="pill" id="diff"></span></div>
+ <div id="stage"><canvas id="cv"></canvas></div>
+ <footer class="tools"><button class="round" id="btnHint">💡<i id="hintN">1</i></button><button class="round" id="btnGrid">#</button></footer>
+ <div id="msg" class="hidden"><div><h2 id="msgT"></h2><p id="msgP"></p><button class="primary" id="msgB"></button></div></div></section>
+<aside id="settings" class="sheet hidden"><div>
+ <div class="row"><h2>Settings</h2><button class="icon" id="sClose">✕</button></div>
+ <label class="row">Sound<input type="checkbox" id="sSound"></label><label class="row">Haptics<input type="checkbox" id="sHaptics"></label><label class="row">RGB arrows<input type="checkbox" id="sRgb"></label>
+ <label class="row">Theme<select id="sTheme"><option value="beige">Eye Comfort Beige</option><option value="dark">Dark Mode</option><option value="green">Pastel Green</option><option value="navy">Navy</option><option value="sunset">Sunset</option></select></label>
+ <div class="row"><button id="sImport">Load levels.json</button><button id="sReset">Reset levels</button></div><input type="file" id="sFile" accept=".json" hidden>
+</div></aside></div>
+<script src="levels.js"></script><script src="core.js"></script><script src="renderer.js"></script><script src="player.js"></script></body></html>
